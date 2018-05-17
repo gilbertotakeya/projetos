@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.IO;
+using DAO;
+using BO;
+
+namespace ImportacaoArquivoBase
+{
+    public partial class frmImportarArquivo : Form
+    {
+        public frmImportarArquivo()
+        {
+            InitializeComponent();
+        }
+
+        private void btnIncluir_Click(object sender, EventArgs e)
+        {
+            this.listaArquivos.Items.Add(this.ntiBuscarDiretorio1.caminhoSelecionado);
+        }
+
+        private void btnProcessar_Click(object sender, EventArgs e)
+        {
+            lblProcessandoArquivo.Visible = true;
+
+            List<String> listaErros = new List<String>();
+
+            BackgroundWorker bwCarregar = new BackgroundWorker();
+            bwCarregar.DoWork += delegate
+            {                
+                foreach (Object obj in listaArquivos.Items)
+                {
+                    String caminho = Convert.ToString(obj);
+                    StreamReader objReader = new StreamReader(caminho, Encoding.UTF8);
+                    while (!objReader.EndOfStream)
+                    {
+                        String sLine = objReader.ReadLine().ToUpper();
+                        if (sLine != null && !String.IsNullOrEmpty(sLine))
+                        {
+                            String retorno = BDOracle.executaComando(sLine);
+                            if (!String.IsNullOrEmpty(retorno))
+                                listaErros.Add(sLine + "\n--->" + retorno);
+                        }
+                    }
+                }
+            };
+            bwCarregar.RunWorkerCompleted += delegate
+            {
+                StreamWriter escrever = new StreamWriter(@"C:\Temp\log.txt", true);
+                
+                if (listaErros != null && listaErros.Count > 0)
+                    escrever.WriteLine(String.Join("\n\n", listaErros.ToArray()));
+
+                lblProcessandoArquivo.Visible = false;
+            };
+            bwCarregar.RunWorkerAsync();
+        }
+
+        private void listaArquivos_DoubleClick(object sender, EventArgs e)
+        {
+            this.listaArquivos.Items.Remove(this.listaArquivos.SelectedItem);
+        }
+    }
+}
