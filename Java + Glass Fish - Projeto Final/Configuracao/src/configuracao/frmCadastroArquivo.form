@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.8" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Cadastro de configura&#xe7;&#xe3;o"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowOpened" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="carregarFormulario"/>
+  </Events>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="txtDescricao" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+                  <Component id="txtAutor" alignment="0" pref="380" max="32767" attributes="0"/>
+                  <Component id="txtTitulo" alignment="0" pref="380" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="btnGravar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnCancelar" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblDescricao" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblApache" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblDescricao1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblDescricao2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="lblDescricao2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="txtTitulo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lblDescricao" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="txtDescricao" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lblDescricao1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="txtAutor" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lblApache" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane1" pref="190" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnGravar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="btnGravar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/configuracao/salvar.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Salvar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnConfirmar_actionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnCancelar">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/configuracao/cancelar.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Cancelar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelar_actionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblApache">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Arquivo apache"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblDescricao">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Descri&#xe7;&#xe3;o modifica&#xe7;&#xe3;o"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtDescricao">
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="txtApache">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="lineWrap" type="boolean" value="true"/>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="ServerRoot &quot;C:/Program Files/Apache Software Foundation/Apache2.2&quot;&#xa;Listen 80&#xa;&#xa;LoadModule actions_module modules/mod_actions.so&#xa;LoadModule alias_module modules/mod_alias.so&#xa;LoadModule asis_module modules/mod_asis.so&#xa;LoadModule auth_basic_module modules/mod_auth_basic.so&#xa;LoadModule authn_default_module modules/mod_authn_default.so&#xa;LoadModule authn_file_module modules/mod_authn_file.so&#xa;LoadModule authz_default_module modules/mod_authz_default.so&#xa;LoadModule authz_groupfile_module modules/mod_authz_groupfile.so&#xa;LoadModule authz_host_module modules/mod_authz_host.so&#xa;LoadModule authz_user_module modules/mod_authz_user.so&#xa;LoadModule autoindex_module modules/mod_autoindex.so&#xa;LoadModule cgi_module modules/mod_cgi.so&#xa;LoadModule dir_module modules/mod_dir.so&#xa;LoadModule env_module modules/mod_env.so&#xa;LoadModule include_module modules/mod_include.so&#xa;LoadModule isapi_module modules/mod_isapi.so&#xa;LoadModule log_config_module modules/mod_log_config.so&#xa;LoadModule mime_module modules/mod_mime.so&#xa;LoadModule negotiation_module modules/mod_negotiation.so&#xa;LoadModule setenvif_module modules/mod_setenvif.so&#xa;&#xa;&lt;IfModule !mpm_netware_module&gt;&#xa;&lt;IfModule !mpm_winnt_module&gt;&#xa;User daemon&#xa;Group daemon&#xa;&#xa;&lt;/IfModule&gt;&#xa;&lt;/IfModule&gt;&#xa;&#xa;&#xa;ServerAdmin teste@teste.com&#xa;&#xa;&#xa;DocumentRoot &quot;C:/Program Files/Apache Software Foundation/Apache2.2/htdocs&quot;&#xa;&#xa;&lt;Directory /&gt;&#xa;    Options FollowSymLinks&#xa;    AllowOverride None&#xa;    Order deny,allow&#xa;    Deny from all&#xa;&lt;/Directory&gt;&#xa;&#xa;&#xa;&lt;Directory &quot;C:/Program Files/Apache Software Foundation/Apache2.2/htdocs&quot;&gt;&#xa;    Options Indexes FollowSymLinks&#xa;&#xa;    AllowOverride None&#xa;&#xa;    Order allow,deny&#xa;    Allow from all&#xa;&#xa;&lt;/Directory&gt;&#xa;&#xa;&lt;IfModule dir_module&gt;&#xa;    DirectoryIndex index.html&#xa;&lt;/IfModule&gt;&#xa;&#xa;&lt;FilesMatch &quot;^\u005c.ht&quot;&gt;&#xa;    Order allow,deny&#xa;    Deny from all&#xa;    Satisfy All&#xa;&lt;/FilesMatch&gt;&#xa;&#xa;ErrorLog &quot;logs/error.log&quot;&#xa;&#xa;LogLevel warn&#xa;&#xa;&lt;IfModule log_config_module&gt;&#xa;    LogFormat &quot;%h %l %u %t \u005c&quot;%r\u005c&quot; %&gt;s %b \u005c&quot;%{Referer}i\u005c&quot; \u005c&quot;%{User-Agent}i\u005c&quot;&quot; combined&#xa;    LogFormat &quot;%h %l %u %t \u005c&quot;%r\u005c&quot; %&gt;s %b&quot; common&#xa;&#xa;    &lt;IfModule logio_module&gt;&#xa;      LogFormat &quot;%h %l %u %t \u005c&quot;%r\u005c&quot; %&gt;s %b \u005c&quot;%{Referer}i\u005c&quot; \u005c&quot;%{User-Agent}i\u005c&quot; %I %O&quot; combinedio&#xa;    &lt;/IfModule&gt;&#xa;&#xa;    CustomLog &quot;logs/access.log&quot; common&#xa;&#xa;&lt;/IfModule&gt;&#xa;&#xa;&lt;IfModule alias_module&gt;&#xa;&#xa;&#xa;    ScriptAlias /cgi-bin/ &quot;C:/Program Files/Apache Software Foundation/Apache2.2/cgi-bin/&quot;&#xa;&#xa;&lt;/IfModule&gt;&#xa;&#xa;&lt;IfModule cgid_module&gt;&#xa;&lt;/IfModule&gt;&#xa;&#xa;&lt;Directory &quot;C:/Program Files/Apache Software Foundation/Apache2.2/cgi-bin&quot;&gt;&#xa;    AllowOverride None&#xa;    Options None&#xa;    Order allow,deny&#xa;    Allow from all&#xa;&lt;/Directory&gt;&#xa;&#xa;DefaultType text/plain&#xa;&#xa;&lt;IfModule mime_module&gt;&#xa;    TypesConfig conf/mime.types&#xa;    AddType application/x-compress .Z&#xa;    AddType application/x-gzip .gz .tgz&#xa;&lt;/IfModule&gt;&#xa;&#xa;&lt;IfModule ssl_module&gt;&#xa;SSLRandomSeed startup builtin&#xa;SSLRandomSeed connect builtin&#xa;&lt;/IfModule&gt;&#xa;" noResource="true" containsInvalidXMLChars="true"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Cursor Default"/>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="lblDescricao1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Autor da modifica&#xe7;&#xe3;o"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtAutor">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblDescricao2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Titulo"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtTitulo">
+    </Component>
+  </SubComponents>
+</Form>

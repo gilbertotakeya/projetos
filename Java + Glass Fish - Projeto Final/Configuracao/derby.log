@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Mon Nov 25 01:46:03 BRST 2013:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.1.2 - (1095077): instance a816c00e-0142-8d5d-2c76-0000006d4d58 
+on database directory C:\Users\Ana Julia\Desktop\Versões do Projeto Tcc\Projeto 05-11-13\Configuracao\Apache  with class loader sun.misc.Launcher$AppClassLoader@7ced01 
+Loaded from file:/C:/Users/Ana%20Julia/Desktop/Vers%c3%b5es%20do%20Projeto%20Tcc/Projeto%2005-11-13/Configuracao/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_21-b11
+user.dir=C:\Users\Ana Julia\Desktop\Versões do Projeto Tcc\Projeto 05-11-13\Configuracao
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
