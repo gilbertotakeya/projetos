@@ -1,0 +1,9 @@
+C:\Projetos\Hosting\bin\Debug\Hosting.exe
+C:\Projetos\Hosting\bin\Debug\Hosting.pdb
+C:\Projetos\Hosting\bin\Debug\Contract.dll
+C:\Projetos\Hosting\bin\Debug\Servico.dll
+C:\Projetos\Hosting\bin\Debug\Servico.pdb
+C:\Projetos\Hosting\bin\Debug\Contract.pdb
+C:\Projetos\Hosting\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Projetos\Hosting\obj\x86\Debug\Hosting.exe
+C:\Projetos\Hosting\obj\x86\Debug\Hosting.pdb

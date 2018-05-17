@@ -1,0 +1,7 @@
+C:\Projetos\Servico\bin\Debug\Servico.dll
+C:\Projetos\Servico\bin\Debug\Servico.pdb
+C:\Projetos\Servico\bin\Debug\Contract.dll
+C:\Projetos\Servico\bin\Debug\Contract.pdb
+C:\Projetos\Servico\obj\Debug\ResolveAssemblyReference.cache
+C:\Projetos\Servico\obj\Debug\Servico.dll
+C:\Projetos\Servico\obj\Debug\Servico.pdb

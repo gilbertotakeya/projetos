@@ -1,0 +1,28 @@
+USE [Tosco]
+GO
+
+/****** Object:  Table [dbo].[Usuarios_Sistema]    Script Date: 10/20/2010 09:00:08 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Usuarios_Sistema](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Login] [varchar](50) NOT NULL,
+	[Senha] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_Usuarios_Sistema] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hashing_Otimizado", "Hashing_Otimizado.vcproj", "{CC274214-3E33-4100-843A-61A06F1182D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC274214-3E33-4100-843A-61A06F1182D6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CC274214-3E33-4100-843A-61A06F1182D6}.Debug|Win32.Build.0 = Debug|Win32
+		{CC274214-3E33-4100-843A-61A06F1182D6}.Release|Win32.ActiveCfg = Release|Win32
+		{CC274214-3E33-4100-843A-61A06F1182D6}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
