@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+        
+    <LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	    <TextView
+	        android:id="@+id/pedidoitensmanutlbProdutoSelecionado"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Produto selecionado" />
+	
+	    <TextView
+	        android:id="@+id/pedidoitensmanutLblComplemento"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Complemento" />
+	
+	    <EditText
+	        android:id="@+id/pedidoitensmanutTbComplemento"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:ems="10" />
+	
+	    <TextView
+	        android:id="@+id/pedidoitensmanutlbQuantidade"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Quantidade" />
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	
+	        <EditText
+	            android:id="@+id/pedidoitensmanutTbQuantidade"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:ems="10"
+	            android:inputType="numberSigned" />
+	    </LinearLayout>
+	
+	    <TextView
+	        android:id="@+id/pedidoitensmanutlbValor"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Valor Unitário" />
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	
+	        <EditText
+	            android:id="@+id/pedidoitensmanutTbValor"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:ems="10"
+	            android:digits=".0123456789"
+	            android:inputType="numberSigned"/>
+	    </LinearLayout>
+	
+	    <TextView
+	        android:id="@+id/pedidoitensmanutlbItem"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Sequencia item" />
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	
+	        <EditText
+	            android:id="@+id/pedidoitensmanutTbSequenciaItem"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:ems="10"
+	            android:inputType="numberSigned" />
+	    </LinearLayout>
+	
+	    <Button
+	        android:id="@+id/pedidoitensmanutBtnGravar"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Gravar" />
+	
+	</LinearLayout>
+
+</ScrollView>

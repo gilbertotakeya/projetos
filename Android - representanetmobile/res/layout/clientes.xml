@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/clienteslblrepresentada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecione a representada" />
+
+    <Spinner
+        android:id="@+id/clientesCmbRepresentada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/clientesLblPesquisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pesquise pelo nome do cliente" />
+
+    <EditText
+        android:id="@+id/clientesTbPesquisa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/clienteslblSelecioneCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecione o cliente" />
+
+    <ListView
+        android:id="@+id/listaclienteselecao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="100dp"
+    android:paddingTop="100dp" >
+
+    <Button
+        android:id="@+id/btnCarteiraPedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/imgcarrinhogrande"
+        android:paddingTop="80dp"
+        android:text="Pedidos"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnSincronismo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/imgsincronismogrande"
+        android:paddingTop="80dp"
+        android:text="Sincronismo"
+        android:textAlignment="center" />
+
+</LinearLayout>

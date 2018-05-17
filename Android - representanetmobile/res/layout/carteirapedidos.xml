@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linLayoutCabecalhoCarteiraPedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/imgcarrinho" />
+
+        <TextView
+            android:id="@+id/viewclienteendereco"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Pedidos não enviados"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linLayoutBotoesCarteiraPedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnIncluir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="novo" />
+
+        <Button
+            android:id="@+id/btnCarteiraPedidoSincronismo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Sync" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/carteirapedidoListaCab"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight=".30"
+            android:clickable="true"
+            android:longClickable="true"
+            android:visibility="visible" >
+
+        </ListView>
+
+    </LinearLayout>       
+</LinearLayout>

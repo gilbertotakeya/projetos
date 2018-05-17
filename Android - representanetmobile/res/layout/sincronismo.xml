@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/sincronismoLblTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tabelas disponíveis para sincronização" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/sincronismoInfStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status atual:" />
+
+            <TextView
+                android:id="@+id/sincronismoLblStatusSincronismo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/sincronismoCkRepresentada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Representada" />
+
+            <CheckBox
+                android:id="@+id/sincronismoCkRepresentante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Representante" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/sincronismoCkUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Usuário" />
+
+            <CheckBox
+                android:id="@+id/sincronismoCkVendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Vendedor" />
+
+            <CheckBox
+                android:id="@+id/sincronismoCkPreposto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Preposto" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/sincronismoCkProduto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Produto" />
+
+            <CheckBox
+                android:id="@+id/sincronismoCkTabelaPreco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Tabela R$" />
+
+            <CheckBox
+                android:id="@+id/sincronismoCkTabelaXProduto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Tab x Prod" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/sincronismoCkCidades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Cidades" />
+
+            <CheckBox
+                android:id="@+id/sincronismoCkEstados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="UF" />
+
+            <CheckBox
+                android:id="@+id/sincronismoCkClientes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Cliente" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/sincronismoCkPedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Pedido" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sincronismoBtnSincronizarDados"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Sincronizar dados" />
+
+        <TextView
+            android:id="@+id/sincronismoLblStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sincronismo" />
+
+        <EditText
+            android:id="@+id/sincronismoTbStatus"
+            android:layout_width="match_parent"
+            android:layout_height="141dp"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="textMultiLine" >
+
+            <requestFocus />
+        </EditText>
+        
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView 
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TableRow
+                android:id="@+id/tr1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/lblNumeroPedido"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nro Pedido" />
+
+                <TextView
+                    android:id="@+id/lblDataPedido"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:text="Data Pedido" />
+
+                <TextView
+                    android:id="@+id/lblNumeroPedidoCliente"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nro ped Cliente" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tr2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/tbNumeroPedido"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/dtPedido"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/tbNumeroPedidoCliente"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+
+            </TableRow>            
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/lblDSPagamento"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Condição Pagamento" />
+
+            <EditText
+                android:id="@+id/tbDSPagamento"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10" />
+
+            <TextView
+                android:id="@+id/pedidocabecalholblcliente"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Cliente" />
+
+            <Spinner
+                android:id="@+id/pedidocabecalhocmbcliente"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/pedidocabecalholblVendedor"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Vendedor" />
+
+            <Spinner
+                android:id="@+id/pedidocabecalhocmbvendedor"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/pedidocabecalholblPreposto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Preposto" />
+
+            <Spinner
+                android:id="@+id/pedidocabecalhocmbPreposto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/lblDSFrete"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Frete" />
+
+                    <TextView
+                        android:id="@+id/lblFG_FRETE"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Transportadora" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <Spinner
+                        android:id="@+id/cmbFGFrete"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/tbDSFrete"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/lblTabelaPreco"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Tabela de preço" />
+
+            <Spinner
+                android:id="@+id/cmbTabelaPreco"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/lblCobranca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo Cobrança" />
+
+            <Spinner
+                android:id="@+id/cmbTipoCobranca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        
+        </LinearLayout>
+    </ScrollView>       
+</LinearLayout>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView 
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TableRow
+                android:id="@+id/tr3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/lblDesc1"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:text="Desconto 1" />
+
+                <TextView
+                    android:id="@+id/lblDesc2"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:text="Desconto 2" />
+
+                <TextView
+                    android:id="@+id/lblDesc3"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:text="Desconto 3" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tr4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/tbDesconto1"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/tbDesconto2"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/tbDesconto3"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal" >
+
+                    <requestFocus />
+                </EditText>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tr5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/lblDesc4"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:text="Desconto 4" />
+
+                <TextView
+                    android:id="@+id/lblDesc5"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:text="Desconto 5" />
+
+                <TextView
+                    android:id="@+id/lblDesc6"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:text="Desconto 6" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tr6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/tbDesconto4"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/tbDesconto5"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/tbDesconto6"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal" />
+
+            </TableRow>
+            
+            <TableRow
+                android:id="@+id/tr7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/lblDesc7"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:text="Desconto 7" />
+
+                <TextView
+                    android:id="@+id/lblQtdParcela"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:text="Qtd. Parcela" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tr8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/tbDesconto7"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/tbQtdParcela"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tr9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/pedidofinalizarlblValorBruto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$ Bruto" />
+
+                <TextView
+                    android:id="@+id/lblVlrDesconto"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:text="R$ Desconto" />
+
+                <TextView
+                    android:id="@+id/pedidofinalizarlblValorLiquido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$ Líquido" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/TableRow01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/pedidofinalizarTbValorBruto"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:digits=".0123456789"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/tbValorDesconto"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:digits=".0123456789"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/pedidofinalizarTbValorLiquido"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:digits=".0123456789"
+                    android:inputType="number" />
+
+            </TableRow>
+            
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/lblDSObservacao"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Observação" />
+
+            <EditText
+                android:id="@+id/tbDSObservacao"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10" />
+
+            <TextView
+                android:id="@+id/lblDSAssistencia"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Descrição Assistência" />
+
+            <EditText
+                android:id="@+id/tbDSAssistencia"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/pedidofinalizarBtnFecharPedido"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="Finalizar pedido" />
+        
+        </LinearLayout>
+    </ScrollView>       
+</LinearLayout>
