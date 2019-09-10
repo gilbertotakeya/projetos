@@ -8,3 +8,4 @@ E:\Sistema\projetosGIT\C#\NETCore\API\obj\Debug\netcoreapp2.0\API.AssemblyInfoIn
 E:\Sistema\projetosGIT\C#\NETCore\API\obj\Debug\netcoreapp2.0\API.AssemblyInfo.cs
 E:\Sistema\projetosGIT\C#\NETCore\API\obj\Debug\netcoreapp2.0\API.dll
 E:\Sistema\projetosGIT\C#\NETCore\API\obj\Debug\netcoreapp2.0\API.pdb
+E:\Sistema\projetosGIT\C#\NETCore\API\obj\Debug\netcoreapp2.0\API.csprojAssemblyReference.cache
