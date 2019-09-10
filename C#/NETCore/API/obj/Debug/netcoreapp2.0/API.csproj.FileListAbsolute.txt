@@ -1,0 +1,10 @@
+E:\Sistema\projetosGIT\C#\NETCore\API\bin\Debug\netcoreapp2.0\API.deps.json
+E:\Sistema\projetosGIT\C#\NETCore\API\bin\Debug\netcoreapp2.0\API.runtimeconfig.json
+E:\Sistema\projetosGIT\C#\NETCore\API\bin\Debug\netcoreapp2.0\API.runtimeconfig.dev.json
+E:\Sistema\projetosGIT\C#\NETCore\API\bin\Debug\netcoreapp2.0\API.dll
+E:\Sistema\projetosGIT\C#\NETCore\API\bin\Debug\netcoreapp2.0\API.pdb
+E:\Sistema\projetosGIT\C#\NETCore\API\obj\Debug\netcoreapp2.0\API.csproj.CoreCompileInputs.cache
+E:\Sistema\projetosGIT\C#\NETCore\API\obj\Debug\netcoreapp2.0\API.AssemblyInfoInputs.cache
+E:\Sistema\projetosGIT\C#\NETCore\API\obj\Debug\netcoreapp2.0\API.AssemblyInfo.cs
+E:\Sistema\projetosGIT\C#\NETCore\API\obj\Debug\netcoreapp2.0\API.dll
+E:\Sistema\projetosGIT\C#\NETCore\API\obj\Debug\netcoreapp2.0\API.pdb

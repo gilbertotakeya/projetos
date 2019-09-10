@@ -1,0 +1,8 @@
+E:\Sistema\projetosGIT\C#\NETCore\WebTeste\WebTeste\bin\Debug\netcoreapp2.0\LubiAPI.deps.json
+E:\Sistema\projetosGIT\C#\NETCore\WebTeste\WebTeste\bin\Debug\netcoreapp2.0\LubiAPI.runtimeconfig.json
+E:\Sistema\projetosGIT\C#\NETCore\WebTeste\WebTeste\bin\Debug\netcoreapp2.0\LubiAPI.runtimeconfig.dev.json
+E:\Sistema\projetosGIT\C#\NETCore\WebTeste\WebTeste\bin\Debug\netcoreapp2.0\LubiAPI.dll
+E:\Sistema\projetosGIT\C#\NETCore\WebTeste\WebTeste\obj\Debug\netcoreapp2.0\LubiAPI.csprojResolveAssemblyReference.cache
+E:\Sistema\projetosGIT\C#\NETCore\WebTeste\WebTeste\obj\Debug\netcoreapp2.0\LubiAPI.csproj.CoreCompileInputs.cache
+E:\Sistema\projetosGIT\C#\NETCore\WebTeste\WebTeste\obj\Debug\netcoreapp2.0\LubiAPI.AssemblyInfoInputs.cache
+E:\Sistema\projetosGIT\C#\NETCore\WebTeste\WebTeste\obj\Debug\netcoreapp2.0\LubiAPI.AssemblyInfo.cs
