@@ -1,0 +1,5 @@
+D:\Projetos\ProjetosVS\Visual Studio 2012\wsIntegracao\wsIntegracao\bin\wsIntegracao.dll
+D:\Projetos\ProjetosVS\Visual Studio 2012\wsIntegracao\wsIntegracao\bin\wsIntegracao.pdb
+D:\Projetos\ProjetosVS\Visual Studio 2012\wsIntegracao\wsIntegracao\obj\Release\wsIntegracao.dll
+D:\Projetos\ProjetosVS\Visual Studio 2012\wsIntegracao\wsIntegracao\obj\Release\wsIntegracao.pdb
+D:\Projetos\ProjetosVS\Visual Studio 2012\wsIntegracao\wsIntegracao\obj\Release\wsIntegracao.csprojResolveAssemblyReference.cache
