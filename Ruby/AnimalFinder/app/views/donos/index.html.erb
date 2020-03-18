@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Donos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Telefone</th>
+      <th>Senha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @donos.each do |dono| %>
+      <tr>
+        <td><%= dono.Nome %></td>
+        <td><%= dono.Email %></td>
+        <td><%= dono.Telefone %></td>
+        <td><%= dono.Senha %></td>
+        <td><%= link_to 'Show', dono %></td>
+        <td><%= link_to 'Edit', edit_dono_path(dono) %></td>
+        <td><%= link_to 'Destroy', dono, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dono', new_dono_path %>

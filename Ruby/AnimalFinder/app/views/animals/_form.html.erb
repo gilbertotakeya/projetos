@@ -1,0 +1,65 @@
+<%= form_with(model: animal, local: true) do |form| %>
+  <% if animal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(animal.errors.count, "error") %> prohibited this animal from being saved:</h2>
+
+      <ul>
+      <% animal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Nome %>
+    <%= form.text_field :Nome, id: :animal_Nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Idade %>
+    <%= form.text_field :Idade, id: :animal_Idade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :InformacoesExtras %>
+    <%= form.text_area :InformacoesExtras, id: :animal_InformacoesExtras %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cidade %>
+    <%= form.text_field :Cidade, id: :animal_Cidade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Estado %>
+    <%= form.text_field :Estado, id: :animal_Estado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Status %>
+    <%= form.text_field :Status, id: :animal_Status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :IdDono %>
+    <%= form.number_field :IdDono, id: :animal_IdDono %>
+  </div>
+  <div class="field">
+    <%= form.label :EncontradoPor %>
+    <%= form.text_field :EncontradoPor, id: :animalEncontradoPor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :TelefoneContato %>
+    <%= form.text_field :TelefoneContato, id: :animalTelefoneContato %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Localizacao %>
+    <%= form.text_field :Localizacao, id: :animalLocalizacao %>
+  </div>  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

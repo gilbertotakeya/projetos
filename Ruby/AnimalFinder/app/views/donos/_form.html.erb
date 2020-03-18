@@ -1,0 +1,37 @@
+<%= form_with(model: dono, local: true) do |form| %>
+  <% if dono.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dono.errors.count, "error") %> prohibited this dono from being saved:</h2>
+
+      <ul>
+      <% dono.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Nome %>
+    <%= form.text_field :Nome, id: :dono_Nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Email %>
+    <%= form.text_field :Email, id: :dono_Email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Telefone %>
+    <%= form.text_field :Telefone, id: :dono_Telefone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Senha %>
+    <%= form.text_field :Senha, id: :dono_Senha %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class Dono < ApplicationRecord
+end
