@@ -36,7 +36,7 @@ namespace AnimalFinder.Models
 
         public int IdDono { get; set; }
 
-        [NotMapped]
-        public Dono Dono { get; set; }
+        [ForeignKey("IdDono")]
+        public virtual Dono Dono { get; set; }
     }
 }
