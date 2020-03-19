@@ -1,12 +1,11 @@
 ﻿@model AnimalFinder.Models.Dono
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar registro do dono";
 }
 
-<h1>Edit</h1>
+<h1>ViewData["Title"]</h1>
 
-<h4>Dono</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -41,7 +40,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" asp-controller="Animals">Voltar para listagem de animais desaparecidos</a>
 </div>
 
 @section Scripts {
