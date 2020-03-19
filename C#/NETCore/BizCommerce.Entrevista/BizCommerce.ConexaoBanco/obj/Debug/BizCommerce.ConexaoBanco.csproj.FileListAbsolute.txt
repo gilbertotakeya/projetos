@@ -1,0 +1,6 @@
+C:\Users\Junior\source\repos\BizCommerce.Entrevista\BizCommerce.ConexaoBanco\bin\Debug\BizCommerce.ConexaoBanco.dll
+C:\Users\Junior\source\repos\BizCommerce.Entrevista\BizCommerce.ConexaoBanco\bin\Debug\BizCommerce.ConexaoBanco.pdb
+C:\Users\Junior\source\repos\BizCommerce.Entrevista\BizCommerce.ConexaoBanco\bin\Debug\MySql.Data.dll
+C:\Users\Junior\source\repos\BizCommerce.Entrevista\BizCommerce.ConexaoBanco\obj\Debug\BizCommerce.ConexaoBanco.csproj.CoreCompileInputs.cache
+C:\Users\Junior\source\repos\BizCommerce.Entrevista\BizCommerce.ConexaoBanco\obj\Debug\BizCommerce.ConexaoBanco.dll
+C:\Users\Junior\source\repos\BizCommerce.Entrevista\BizCommerce.ConexaoBanco\obj\Debug\BizCommerce.ConexaoBanco.pdb

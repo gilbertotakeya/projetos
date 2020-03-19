@@ -1,0 +1,34 @@
+﻿@model BizCommerce.Entrevista.Aplicacao.Models.ProfissionalEspecialidade
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Profissional x Especialidade</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.especialidade.Nom_Especialidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.especialidade.Nom_Especialidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.profissional.Nom_profissional)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.profissional.Nom_profissional)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id_Profissional_Especialidade }) |
+    @Html.ActionLink("Voltar para lista", "Index")
+</p>

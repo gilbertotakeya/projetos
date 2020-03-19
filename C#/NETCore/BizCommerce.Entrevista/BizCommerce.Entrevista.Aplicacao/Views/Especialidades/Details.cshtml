@@ -1,0 +1,25 @@
+﻿@model BizCommerce.Entrevista.Aplicacao.Models.Especialidade
+
+@{
+    ViewBag.Title = "Detalhes da especialidade";
+}
+
+<h2>Detalhes da especialidade</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom_Especialidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom_Especialidade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id_Especialidade }) |
+    @Html.ActionLink("Voltar para listagem", "Index")
+</p>

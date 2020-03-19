@@ -1,0 +1,39 @@
+﻿@model BizCommerce.Entrevista.Aplicacao.Models.ProfissionalEspecialidade
+
+@{
+    ViewBag.Title = "Deletar";
+}
+
+<h2>Deletar</h2>
+
+<h3>Tem certeza que deseja apagar a especialidade deste profissional?</h3>
+<div>
+    <h4>ProfissionalEspecialidade</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.especialidade.Nom_Especialidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.especialidade.Nom_Especialidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.profissional.Nom_profissional)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.profissional.Nom_profissional)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar para listagem", "Index")
+        </div>
+    }
+</div>

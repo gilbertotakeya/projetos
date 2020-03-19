@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BizCommerce.Entrevista.Aplicacao.Models.ProfissionalEspecialidade>
+
+@{
+    ViewBag.Title = "Profissional por Especialidades";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Incluir novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Especialidade
+        </th>
+        <th>
+            Profissional
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.especialidade.Nom_Especialidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.profissional.Nom_profissional)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id_Profissional_Especialidade }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.Id_Profissional_Especialidade }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.Id_Profissional_Especialidade })
+        </td>
+    </tr>
+}
+
+</table>
