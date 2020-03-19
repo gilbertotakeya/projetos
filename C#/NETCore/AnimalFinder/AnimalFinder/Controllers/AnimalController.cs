@@ -99,6 +99,8 @@ namespace AnimalFinder.Controllers
             if (ModelState.IsValid)
             {
                 animal.IdDono = _session.GetInt32("IdUsuarioLogado").Value;
+                animal.Status = Definicoes.SituacaoAnimal.Perdido;
+
                 _context.Add(animal);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
