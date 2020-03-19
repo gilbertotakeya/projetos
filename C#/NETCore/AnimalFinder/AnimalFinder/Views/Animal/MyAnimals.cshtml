@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<AnimalFinder.Models.Animal>
 
 @{
-    ViewData["Title"] = "Listagem de animais desaparecidos";
+    ViewData["Title"] = "Listagem dos meus animais";
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -63,10 +63,9 @@
                 </td>
                 <td>
                     <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
-
                     @if (item.Status == Definicoes.SituacaoAnimal.Perdido)
                     {
-                        @Html.Label(" |")
+                        @Html.Label("|")
                         <a asp-action="Find" asp-route-id="@item.Id">Encontrei</a>
                     }
 
@@ -75,7 +74,6 @@
                         @Html.Label("|")
                         <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> @Html.Label("|")
                         <a asp-action="Delete" ifp-route-id="@item.Id">Excluir</a> @Html.Label("|")
-
                     }
                 </td>
             </tr>

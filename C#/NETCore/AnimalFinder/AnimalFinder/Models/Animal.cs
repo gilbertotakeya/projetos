@@ -40,5 +40,14 @@ namespace AnimalFinder.Models
         [Display(Description = "Dono", Name = "Dono")]
         [ForeignKey("IdDono")]
         public virtual Dono Dono { get; set; }
+
+        [Display(Description = "Encontrado por", Name = "Encontrado por")]
+        public string EncontradoPor { get; set; }
+
+        [Display(Description = "Telefone para contato", Name = "Telefone para contato")]
+        public string TelefoneContato { get; set; }
+
+        [Display(Description = "Localização", Name = "Localização")]
+        public string Localizacao { get; set; }
     }
 }

@@ -53,7 +53,29 @@ namespace AnimalFinder.Controllers
             return View(lista);
         }
 
-        public async Task<IActionResult> TodosAnimais()
+        public async Task<IActionResult> MyAnimals()
+        {
+            if (_session.GetString("UsuarioLogado") == null)
+            {
+                return RedirectToAction("Login", "Dono");
+            }
+
+            CarregarDadosPadrao();
+
+            var lista = await _context.Animal.Where(w => w.IdDono == _session.GetInt32("IdUsuarioLogado").Value).ToListAsync();
+
+            lista.ForEach(w =>
+            {
+                if (w.IdDono > 0)
+                {
+                    w.Dono = _context.Dono.Where(f => f.Id == w.IdDono).FirstOrDefault();
+                }
+            });            
+
+            return View(lista);
+        }
+
+        public async Task<IActionResult> AllAnimals()
         {
             return View(await _context.Animal.ToListAsync());
         }
@@ -66,8 +88,7 @@ namespace AnimalFinder.Controllers
                 return NotFound();
             }
 
-            var animal = await _context.Animal
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var animal = await _context.Animal.FirstOrDefaultAsync(m => m.Id == id);
             if (animal == null)
             {
                 return NotFound();
@@ -75,8 +96,6 @@ namespace AnimalFinder.Controllers
 
             return View(animal);
         }
-
-
 
         // GET: Animals/Create
         public IActionResult Create()
@@ -96,6 +115,10 @@ namespace AnimalFinder.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Animal animal, String btnAction)
         {
+            ModelState.Remove("EncontradoPor");
+            ModelState.Remove("TelefoneContato");
+            ModelState.Remove("Localizacao");
+
             if (ModelState.IsValid)
             {
                 animal.IdDono = _session.GetInt32("IdUsuarioLogado").Value;
@@ -141,11 +164,81 @@ namespace AnimalFinder.Controllers
                 return NotFound();
             }
 
+            ModelState.Remove("EncontradoPor");
+            ModelState.Remove("TelefoneContato");
+            ModelState.Remove("Localizacao");
+
             if (ModelState.IsValid)
             {
                 try
                 {
                     animal.IdDono = _session.GetInt32("IdUsuarioLogado").Value;
+                    _context.Update(animal);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!AnimalExists(animal.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(animal);
+        }
+
+        public async Task<IActionResult> Find(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var animal = await _context.Animal.FindAsync(id);
+            if (animal == null)
+            {
+                return NotFound();
+            }
+            return View(animal);
+        }
+
+        // POST: Animals/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Find(int id, Animal animal)
+        {
+            if (id != animal.Id)
+            {
+                return NotFound();
+            }
+
+            try
+            {
+                if (String.IsNullOrEmpty(animal.EncontradoPor) || String.IsNullOrWhiteSpace(animal.EncontradoPor))
+                    throw new SystemException("Informe o nome da pessoa que encontrou o animal.");
+                if (String.IsNullOrEmpty(animal.TelefoneContato) || String.IsNullOrWhiteSpace(animal.TelefoneContato))
+                    throw new SystemException("Informe o número de telefone da pessoa que encontrou o animal.");
+                if (String.IsNullOrEmpty(animal.Localizacao) || String.IsNullOrWhiteSpace(animal.Localizacao))
+                    throw new SystemException("Informe a localização em que está o animal.");
+            }
+            catch(Exception ex)
+            {
+                TempData["MensagemErro"] = ex.Message;
+                return View(animal);
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    animal.IdDono = _session.GetInt32("IdUsuarioLogado").Value;
+                    animal.Status = Definicoes.SituacaoAnimal.Comunicado;
+
                     _context.Update(animal);
                     await _context.SaveChangesAsync();
                 }

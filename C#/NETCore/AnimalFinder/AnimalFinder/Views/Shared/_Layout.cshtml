@@ -31,14 +31,33 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Animal" asp-action="Index">Animais</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Dono" asp-action="Login">Login</a>
-                        </li>
+
+                        @if (ViewBag.IdUsuarioLogado > 0)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Animal" asp-action="MyAnimals">Meus animais</a>
+                            </li>
+                        }
+
+                        @if (ViewBag.IdUsuarioLogado <= 0)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Dono" asp-action="Login">Login</a>
+                            </li>
+                        }
+
+                        @if (ViewBag.IdUsuarioLogado > 0)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Dono" asp-action="Logout">Logout</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+    <partial name="_Alerta" />
     <div class="container">
         <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3">

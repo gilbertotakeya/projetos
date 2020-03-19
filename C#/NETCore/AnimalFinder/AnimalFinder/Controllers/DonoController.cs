@@ -24,6 +24,12 @@ namespace AnimalFinder.Controllers
             return View();
         }
 
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Animal");
+        }
+
         [HttpPost]
         public IActionResult Login(Dono model)
         {
