@@ -22,7 +22,7 @@ namespace AnimalFinder.Models
         public string Email { get; set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Informe o telefone")]
-        [MaxLength(12, ErrorMessage = "Telefone atingiu o tamanho máximo de 12 caracteres")]
+        [MaxLength(15, ErrorMessage = "Telefone atingiu o tamanho máximo de 15 caracteres")]
         public string Telefone { get; set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Informe a senha")]
