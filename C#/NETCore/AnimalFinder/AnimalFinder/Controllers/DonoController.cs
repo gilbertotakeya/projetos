@@ -9,13 +9,18 @@ using AnimalFinder.Models;
 
 namespace AnimalFinder.Controllers
 {
-    public class DonoesController : Controller
+    public class DonoController : Controller
     {
         private readonly AnimalFinderContext _context;
 
-        public DonoesController(AnimalFinderContext context)
+        public DonoController(AnimalFinderContext context)
         {
             _context = context;
+        }
+
+        public IActionResult Login()
+        {
+            return View();
         }
 
         // GET: Donoes

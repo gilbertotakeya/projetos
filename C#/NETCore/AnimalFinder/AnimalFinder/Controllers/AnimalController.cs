@@ -9,11 +9,11 @@ using AnimalFinder.Models;
 
 namespace AnimalFinder.Controllers
 {
-    public class AnimalsController : Controller
+    public class AnimalController : Controller
     {
         private readonly AnimalFinderContext _context;
 
-        public AnimalsController(AnimalFinderContext context)
+        public AnimalController(AnimalFinderContext context)
         {
             _context = context;
         }
@@ -58,7 +58,7 @@ namespace AnimalFinder.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Animal animal)
+        public async Task<IActionResult> Create(Animal animal, String btnAction)
         {
             if (ModelState.IsValid)
             {

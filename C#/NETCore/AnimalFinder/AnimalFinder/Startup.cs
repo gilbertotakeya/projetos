@@ -63,7 +63,8 @@ namespace AnimalFinder
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Dono}/{action=Login}");
+                    //template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
