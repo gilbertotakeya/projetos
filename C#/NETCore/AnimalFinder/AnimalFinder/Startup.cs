@@ -36,8 +36,9 @@ namespace AnimalFinder
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddDbContext<AnimalFinderContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("AnimalFinderContext")));
+            //services.AddDbContext<AnimalFinderContext>(options =>
+            //        options.UseSqlServer(Configuration.GetConnectionString("AnimalFinderContext")));
+            services.AddDbContext<AnimalFinderContext>(options => options.UseMySQL(Configuration.GetConnectionString("AnimalFinderContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
