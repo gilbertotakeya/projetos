@@ -29,13 +29,15 @@ namespace AnimalFinder.Models
         public string Cidade { get; set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Informe o estado")]
-        public string Estado { get; set; }
+        public Estado Estado { get; set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Informe o status")]
         public SituacaoAnimal Status { get; set; }
 
+        [Display(Description = "Dono", Name = "Dono")]
         public int IdDono { get; set; }
 
+        [Display(Description = "Dono", Name = "Dono")]
         [ForeignKey("IdDono")]
         public virtual Dono Dono { get; set; }
     }

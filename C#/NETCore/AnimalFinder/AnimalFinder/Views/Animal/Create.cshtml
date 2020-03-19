@@ -42,11 +42,11 @@
                 <select asp-for="Status" class="form-control" asp-items="Html.GetEnumSelectList<AnimalFinder.Models.Definicoes.SituacaoAnimal>()"></select>
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="IdDono" class="control-label"></label>
                 <input asp-for="IdDono" class="form-control" />                
                 <span asp-validation-for="IdDono" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <input type="submit" value="Cadastrar" class="btn btn-primary" name="btnCadastrar" />
             </div>

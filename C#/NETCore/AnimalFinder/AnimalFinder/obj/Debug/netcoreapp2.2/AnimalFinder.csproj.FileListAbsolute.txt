@@ -45,7 +45,6 @@ E:\Sistema\projetosGIT\C#\NETCore\AnimalFinder\AnimalFinder\bin\Debug\netcoreapp
 E:\Sistema\projetosGIT\C#\NETCore\AnimalFinder\AnimalFinder\bin\Debug\netcoreapp2.2\AnimalFinder.pdb
 E:\Sistema\projetosGIT\C#\NETCore\AnimalFinder\AnimalFinder\bin\Debug\netcoreapp2.2\AnimalFinder.Views.dll
 E:\Sistema\projetosGIT\C#\NETCore\AnimalFinder\AnimalFinder\bin\Debug\netcoreapp2.2\AnimalFinder.Views.pdb
-E:\Sistema\projetosGIT\C#\NETCore\AnimalFinder\AnimalFinder\obj\Debug\netcoreapp2.2\AnimalFinder.csprojAssemblyReference.cache
 E:\Sistema\projetosGIT\C#\NETCore\AnimalFinder\AnimalFinder\obj\Debug\netcoreapp2.2\AnimalFinder.csproj.CoreCompileInputs.cache
 E:\Sistema\projetosGIT\C#\NETCore\AnimalFinder\AnimalFinder\obj\Debug\netcoreapp2.2\AnimalFinder.RazorAssemblyInfo.cache
 E:\Sistema\projetosGIT\C#\NETCore\AnimalFinder\AnimalFinder\obj\Debug\netcoreapp2.2\AnimalFinder.RazorAssemblyInfo.cs

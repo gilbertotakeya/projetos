@@ -27,6 +27,7 @@ namespace AnimalFinder.Models
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Informe a senha")]
         [MaxLength(4000, ErrorMessage = "Senha tamanho o tamanho máximo de 4000 caracteres")]
+        [DataType(DataType.Password)]
         public string Senha { get; set; }
     }
 }

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "474e9a01025f67c24c8beeaddb865c2e9302315f"
+    "signature": "816c9e9326cc14490401bb0382a81a7eb3bab799"
   },
   "compilationOptions": {
     "defines": [
@@ -26,10 +26,12 @@
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
+          "Microsoft.AspNetCore.Session": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
           "MySql.Data.Entity": "6.10.9",
-          "MySql.Data.EntityFrameworkCore": "8.0.19"
+          "MySql.Data.EntityFrameworkCore": "8.0.19",
+          "System.Web.Http.Common": "4.0.20126.16343"
         },
         "runtime": {
           "AnimalFinder.dll": {}
@@ -642,6 +644,17 @@
           "Microsoft.NETCore.Platforms": "3.0.0",
           "Microsoft.NETCore.Targets": "2.0.0",
           "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Web.Http.Common/4.0.20126.16343": {
+        "runtime": {
+          "lib/net40/System.Web.Http.Common.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.20126.16343"
+          }
+        },
+        "compile": {
+          "lib/net40/System.Web.Http.Common.dll": {}
         }
       },
       "System.Xml.XPath.XmlDocument/4.0.1": {
@@ -4092,6 +4105,13 @@
       "sha512": "sha512-saGfUV8uqVW6LeURiqxcGhZ24PzuRNaUBtbhVeuUAvky1naH395A/1nY0P2bWvrw/BreRtIB/EzTDkGBpqCwEw==",
       "path": "system.threading.timer/4.0.1",
       "hashPath": "system.threading.timer.4.0.1.nupkg.sha512"
+    },
+    "System.Web.Http.Common/4.0.20126.16343": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3tybnaxSQAWu2aLSAh+7PRZ8Cw4f/DIECPJZ5yBcnm5sQKjr95zViCasYH3p6Z1hxATSTmlecvCcvlt/FDy+8w==",
+      "path": "system.web.http.common/4.0.20126.16343",
+      "hashPath": "system.web.http.common.4.0.20126.16343.nupkg.sha512"
     },
     "System.Xml.XPath.XmlDocument/4.0.1": {
       "type": "package",

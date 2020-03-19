@@ -6,22 +6,51 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AnimalFinder.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace AnimalFinder.Controllers
 {
     public class AnimalController : Controller
     {
         private readonly AnimalFinderContext _context;
+        private readonly IUser _user;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private ISession _session => _httpContextAccessor.HttpContext.Session;
 
-        public AnimalController(AnimalFinderContext context)
+        public AnimalController(AnimalFinderContext context, IUser user, IHttpContextAccessor accessor)
         {
             _context = context;
+            _user = user;
+            _httpContextAccessor = accessor;
+        }
+
+        private void CarregarDadosPadrao()
+        {
+            var IdUsuarioLogado = _session.GetInt32("IdUsuarioLogado");
+            if (IdUsuarioLogado.HasValue)
+            {
+                ViewBag.IdUsuarioLogado = _session.GetInt32("IdUsuarioLogado").Value;
+            }
+            else
+                ViewBag.IdUsuarioLogado = -1;
         }
 
         // GET: Animals
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Animal.Where(w=>w.Status == Definicoes.SituacaoAnimal.Perdido).ToListAsync());
+            var lista = await _context.Animal.Where(w => w.Status == Definicoes.SituacaoAnimal.Perdido).ToListAsync();
+
+            lista.ForEach(w=>
+            {
+                if (w.IdDono > 0)
+                {
+                    w.Dono = _context.Dono.Where(f => f.Id == w.IdDono).FirstOrDefault();
+                }
+            }) ;
+
+            CarregarDadosPadrao();
+
+            return View(lista);
         }
 
         public async Task<IActionResult> TodosAnimais()
@@ -47,21 +76,29 @@ namespace AnimalFinder.Controllers
             return View(animal);
         }
 
+
+
         // GET: Animals/Create
         public IActionResult Create()
         {
+            if (_session.GetString("UsuarioLogado") == null)
+            {
+                return RedirectToAction("Login", "Dono");
+            }
+
+            CarregarDadosPadrao();
+
             return View();
         }
 
         // POST: Animals/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Animal animal, String btnAction)
         {
             if (ModelState.IsValid)
             {
+                animal.IdDono = _session.GetInt32("IdUsuarioLogado").Value;
                 _context.Add(animal);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -77,6 +114,13 @@ namespace AnimalFinder.Controllers
                 return NotFound();
             }
 
+            if (_session.GetString("UsuarioLogado") == null)
+            {
+                return RedirectToAction("Login", "Dono");
+            }
+
+            CarregarDadosPadrao();
+
             var animal = await _context.Animal.FindAsync(id);
             if (animal == null)
             {
@@ -86,8 +130,6 @@ namespace AnimalFinder.Controllers
         }
 
         // POST: Animals/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Animal animal)
@@ -101,6 +143,7 @@ namespace AnimalFinder.Controllers
             {
                 try
                 {
+                    animal.IdDono = _session.GetInt32("IdUsuarioLogado").Value;
                     _context.Update(animal);
                     await _context.SaveChangesAsync();
                 }

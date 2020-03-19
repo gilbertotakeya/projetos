@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AnimalFinder.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace AnimalFinder.Controllers
 {
@@ -19,10 +20,27 @@ namespace AnimalFinder.Controllers
         }
 
         public IActionResult Login()
-        {
+        {            
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Login(Dono model)
+        {
+            var usuario = _context.Dono.Where(w => w.Email == model.Email && w.Senha == model.Senha).FirstOrDefault();
+
+            if (usuario != null)
+            {
+                HttpContext.Session.SetString("UsuarioLogado", usuario.Email);
+                HttpContext.Session.SetInt32("IdUsuarioLogado", usuario.Id);
+                return RedirectToAction("Create", "Animal");
+            }
+            else
+                HttpContext.Session.Clear();
+
+            TempData["MensagemErro"] = "Usuário ou senha inválidos";
+            return View();
+        }
         // GET: Donoes
         public async Task<IActionResult> Index()
         {

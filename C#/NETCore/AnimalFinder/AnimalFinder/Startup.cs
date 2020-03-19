@@ -39,6 +39,12 @@ namespace AnimalFinder
             //services.AddDbContext<AnimalFinderContext>(options =>
             //        options.UseSqlServer(Configuration.GetConnectionString("AnimalFinderContext")));
             services.AddDbContext<AnimalFinderContext>(options => options.UseMySQL(Configuration.GetConnectionString("AnimalFinderContext")));
+
+            // ASP.NET HttpContext dependency 2 // Registro para login em qualquer camada
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddScoped<IUser, AspNetUser>();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,13 +64,14 @@ namespace AnimalFinder
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Dono}/{action=Login}");
-                    //template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Animal}/{action=Index}");
+                //template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
