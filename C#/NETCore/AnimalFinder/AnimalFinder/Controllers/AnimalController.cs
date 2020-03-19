@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AnimalFinder.Models;
 using Microsoft.AspNetCore.Http;
+using System.Text.Json;
 
 namespace AnimalFinder.Controllers
 {
@@ -33,6 +34,35 @@ namespace AnimalFinder.Controllers
             }
             else
                 ViewBag.IdUsuarioLogado = -1;
+        }
+
+        public JsonResult ListOfDisappearedAnimals()
+        {
+            var lista = _context.Animal.Where(w => w.Status == Definicoes.SituacaoAnimal.Perdido).ToList();
+
+            lista.ForEach(w =>
+            {
+                if (w.IdDono > 0)
+                {
+                    w.Dono = _context.Dono.Where(f => f.Id == w.IdDono).FirstOrDefault();
+                }
+            });
+
+            var listagem = lista.Select(w => new
+            {
+                Id = w.Id,
+                Nome = w.Nome,
+                Idade = w.Idade,
+                Dono = (w.Dono != null ? w.Dono.Nome : ""),
+                InformacoesExtras = w.InformacoesExtras,
+                Cidade = w.Cidade,
+                Estado = w.Estado,
+                Status = w.Status
+            });
+
+            var jsonString = JsonSerializer.Serialize(listagem);
+
+            return Json(jsonString);
         }
 
         // GET: Animals

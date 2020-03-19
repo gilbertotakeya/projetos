@@ -81,3 +81,4 @@ E:\Sistema\projetosGIT\C#\NETCore\AnimalFinder\AnimalFinder\obj\Debug\netcoreapp
 E:\Sistema\projetosGIT\C#\NETCore\AnimalFinder\AnimalFinder\obj\Debug\netcoreapp2.2\Razor\Views\Animal\Find.g.cshtml.cs
 E:\Sistema\projetosGIT\C#\NETCore\AnimalFinder\AnimalFinder\obj\Debug\netcoreapp2.2\Razor\Views\Animal\MyAnimals.g.cshtml.cs
 E:\Sistema\projetosGIT\C#\NETCore\AnimalFinder\AnimalFinder\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Alerta.g.cshtml.cs
+E:\Sistema\projetosGIT\C#\NETCore\AnimalFinder\AnimalFinder\obj\Debug\netcoreapp2.2\AnimalFinder.csprojAssemblyReference.cache
