@@ -156,6 +156,7 @@ namespace AnimalFinder.Controllers
 
                 _context.Add(animal);
                 await _context.SaveChangesAsync();
+                TempData["MensagemSucesso"] = "Cadastrado com sucesso!";
                 return RedirectToAction(nameof(Index));
             }
             return View(animal);
@@ -217,6 +218,7 @@ namespace AnimalFinder.Controllers
                         throw;
                     }
                 }
+                TempData["MensagemSucesso"] = "Alterado com sucesso!";
                 return RedirectToAction(nameof(Index));
             }
             return View(animal);
@@ -283,8 +285,10 @@ namespace AnimalFinder.Controllers
                         throw;
                     }
                 }
+                TempData["MensagemSucesso"] = "Informado com sucesso!";
                 return RedirectToAction(nameof(Index));
             }
+
             return View(animal);
         }
 

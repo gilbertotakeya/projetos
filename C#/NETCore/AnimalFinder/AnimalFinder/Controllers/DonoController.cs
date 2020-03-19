@@ -33,7 +33,8 @@ namespace AnimalFinder.Controllers
         [HttpPost]
         public IActionResult Login(Dono model)
         {
-            var usuario = _context.Dono.Where(w => w.Email == model.Email && w.Senha == model.Senha).FirstOrDefault();
+            var usuario = _context.Dono.Where(w => w.Email == model.Email &&
+            Criptografia.DecriptarDado(w.Senha) == model.Senha).FirstOrDefault();
 
             if (usuario != null)
             {
@@ -47,6 +48,7 @@ namespace AnimalFinder.Controllers
             TempData["MensagemErro"] = "Usuário ou senha inválidos";
             return View();
         }
+
         // GET: Donoes
         public async Task<IActionResult> Index()
         {
@@ -86,9 +88,13 @@ namespace AnimalFinder.Controllers
         {
             if (ModelState.IsValid)
             {
+                dono.Senha = Criptografia.EncriptarDado(dono.Senha);
+
                 _context.Add(dono);
                 await _context.SaveChangesAsync();
-                
+
+                TempData["MensagemSucesso"] = "Cadastrado com sucesso! Redirecionando para o login!";
+
                 return RedirectToAction("Login", "Dono");
             }
             return View(dono);

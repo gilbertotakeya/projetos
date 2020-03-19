@@ -3,4 +3,12 @@
     <div class="alert alert-danger" role="alert">
         @TempData["MensagemErro"]
     </div>
+
+}
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-info" role="alert">
+        @TempData["MensagemSucesso"]
+    </div>
 }
