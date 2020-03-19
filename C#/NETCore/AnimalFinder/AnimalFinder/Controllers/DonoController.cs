@@ -93,7 +93,7 @@ namespace AnimalFinder.Controllers
                 _context.Add(dono);
                 await _context.SaveChangesAsync();
 
-                TempData["MensagemSucesso"] = "Cadastrado com sucesso! Redirecionando para o login!";
+                TempData["MensagemSucesso"] = "Cadastrado com sucesso! Faça o login!";
 
                 return RedirectToAction("Login", "Dono");
             }
