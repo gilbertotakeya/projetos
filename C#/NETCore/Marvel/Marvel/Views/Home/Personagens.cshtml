@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Marvel.Models.ConsultaMarvelPersonagemNivel3ViewModel>
+
+@{
+    ViewData["Title"] = "Personagens Marvel";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3 d-flex align-items-stretch">
+            <div class="card" style="width: 18rem;max-width: 20rem;">
+                <img src="@item.thumbnail.completePath" class="card-img-top" alt="@item.name">
+                <div class="card-body">
+                    <h5 class="card-title">@item.name</h5>
+                    <p class="card-text">@item.description</p>
+                    <a href="@Url.Action("Quadrinhos", "Home", new { id = @item.id})" class="btn btn-primary">Quadrinhos do personagem</a>
+                </div>
+            </div>
+        </div>               
+    }
+</div>

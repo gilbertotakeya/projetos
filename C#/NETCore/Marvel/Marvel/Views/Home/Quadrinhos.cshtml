@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Marvel.Models.ConsultaMarvelQuadrinhoNivel3ViewModel>
+
+@{
+    ViewData["Title"] = "Quadrinhos de participação do ator";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3 d-flex align-items-stretch">
+            <div class="card" style="width: 18rem;max-width: 20rem;">
+                <img src="@item.thumbnail.completePath" class="card-img-top" alt="@item.title">
+                <div class="card-body">
+                    <h5 class="card-title">@item.title</h5>
+                    <p class="card-text">@item.description</p>
+                </div>
+            </div>
+        </div>               
+    }
+</div>
